@@ -29,7 +29,7 @@ class Authors extends Table {
 @DataClassName('AuthorTag')
 class AuthorTags extends Table {
   @override
-  Set<Column> get primaryKey => {authorId};
+  Set<Column> get primaryKey => {authorId, tagId};
   TextColumn get authorId => text()();
   IntColumn get tagId => integer()();
 }
@@ -37,7 +37,7 @@ class AuthorTags extends Table {
 @DataClassName('AuthorLink')
 class AuthorLinks extends Table {
   @override
-  Set<Column> get primaryKey => {authorId};
+  Set<Column> get primaryKey => {authorId, linkId};
   TextColumn get authorId => text()();
   TextColumn get linkId => text()();
 }
@@ -71,7 +71,7 @@ class Arts extends Table {
 @DataClassName('ArtWork')
 class ArtWorks extends Table {
   @override
-  Set<Column> get primaryKey => {artId};
+  Set<Column> get primaryKey => {artId, authorId};
   TextColumn get artId => text()();
   TextColumn get authorId => text()();
 }
@@ -79,7 +79,7 @@ class ArtWorks extends Table {
 @DataClassName('ArtCategory')
 class ArtCategories extends Table {
   @override
-  Set<Column> get primaryKey => {artId};
+  Set<Column> get primaryKey => {artId, categoryId};
   TextColumn get artId => text()();
   IntColumn get categoryId => integer()();
 }
@@ -124,7 +124,7 @@ class NewsPapers extends Table {
 @DataClassName('NewsPaperAddress')
 class NewsPaperAddresses extends Table {
   @override
-  Set<Column> get primaryKey => {newsPaperId};
+  Set<Column> get primaryKey => {newsPaperId, addressId};
   TextColumn get newsPaperId => text()();
   TextColumn get addressId => text()();
 }
@@ -132,7 +132,7 @@ class NewsPaperAddresses extends Table {
 @DataClassName('NewsPaperImage')
 class NewsPaperImages extends Table {
   @override
-  Set<Column> get primaryKey => {newsPaperId};
+  Set<Column> get primaryKey => {newsPaperId, imageId};
   TextColumn get newsPaperId => text()();
   TextColumn get imageId => text()();
 }
@@ -156,7 +156,7 @@ class Partners extends Table {
 @DataClassName('PartnerCategory')
 class PartnerCategories extends Table {
   @override
-  Set<Column> get primaryKey => {partnerId};
+  Set<Column> get primaryKey => {partnerId, categoryId};
   TextColumn get partnerId => text()();
   IntColumn get categoryId => integer()();
 }
@@ -164,7 +164,7 @@ class PartnerCategories extends Table {
 @DataClassName('PartnerImage')
 class PartnerImages extends Table {
   @override
-  Set<Column> get primaryKey => {partnerId};
+  Set<Column> get primaryKey => {partnerId, imageId};
   TextColumn get partnerId => text()();
   TextColumn get imageId => text()();
 }
@@ -239,7 +239,7 @@ class Routes extends Table {
 @DataClassName('RouteAddress')
 class RouteAddresses extends Table {
   @override
-  Set<Column> get primaryKey => {routeId};
+  Set<Column> get primaryKey => {routeId, addressId};
   TextColumn get routeId => text()();
   TextColumn get addressId => text()();
 }
@@ -248,7 +248,7 @@ class RouteAddresses extends Table {
 @DataClassName('RouteCategory')
 class RouteCategories extends Table {
   @override
-  Set<Column> get primaryKey => {routeId};
+  Set<Column> get primaryKey => {routeId, categoryId};
   TextColumn get routeId => text()();
   IntColumn get categoryId => integer()();
 }
@@ -256,7 +256,7 @@ class RouteCategories extends Table {
 @DataClassName('RouteArt')
 class RouteArts extends Table {
   @override
-  Set<Column> get primaryKey => {routeId};
+  Set<Column> get primaryKey => {routeId, artId};
   TextColumn get routeId => text()();
   TextColumn get artId => text()();
 }

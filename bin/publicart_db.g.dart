@@ -497,7 +497,7 @@ class $AuthorTagsTable extends AuthorTags
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {authorId};
+  Set<GeneratedColumn> get $primaryKey => {authorId, tagId};
   @override
   AuthorTag map(Map<String, dynamic> data, {String? tablePrefix}) {
     return AuthorTag.fromData(data,
@@ -673,7 +673,7 @@ class $AuthorLinksTable extends AuthorLinks
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {authorId};
+  Set<GeneratedColumn> get $primaryKey => {authorId, linkId};
   @override
   AuthorLink map(Map<String, dynamic> data, {String? tablePrefix}) {
     return AuthorLink.fromData(data,
@@ -1339,7 +1339,7 @@ class $ArtWorksTable extends ArtWorks with TableInfo<$ArtWorksTable, ArtWork> {
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {artId};
+  Set<GeneratedColumn> get $primaryKey => {artId, authorId};
   @override
   ArtWork map(Map<String, dynamic> data, {String? tablePrefix}) {
     return ArtWork.fromData(data,
@@ -1517,7 +1517,7 @@ class $ArtCategoriesTable extends ArtCategories
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {artId};
+  Set<GeneratedColumn> get $primaryKey => {artId, categoryId};
   @override
   ArtCategory map(Map<String, dynamic> data, {String? tablePrefix}) {
     return ArtCategory.fromData(data,
@@ -2503,7 +2503,7 @@ class $NewsPaperImagesTable extends NewsPaperImages
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {newsPaperId};
+  Set<GeneratedColumn> get $primaryKey => {newsPaperId, imageId};
   @override
   NewsPaperImage map(Map<String, dynamic> data, {String? tablePrefix}) {
     return NewsPaperImage.fromData(data,
@@ -2685,7 +2685,7 @@ class $NewsPaperAddressesTable extends NewsPaperAddresses
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {newsPaperId};
+  Set<GeneratedColumn> get $primaryKey => {newsPaperId, addressId};
   @override
   NewsPaperAddress map(Map<String, dynamic> data, {String? tablePrefix}) {
     return NewsPaperAddress.fromData(data,
@@ -3188,7 +3188,7 @@ class $PartnerImagesTable extends PartnerImages
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {partnerId};
+  Set<GeneratedColumn> get $primaryKey => {partnerId, imageId};
   @override
   PartnerImage map(Map<String, dynamic> data, {String? tablePrefix}) {
     return PartnerImage.fromData(data,
@@ -3368,7 +3368,7 @@ class $PartnerCategoriesTable extends PartnerCategories
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {partnerId};
+  Set<GeneratedColumn> get $primaryKey => {partnerId, categoryId};
   @override
   PartnerCategory map(Map<String, dynamic> data, {String? tablePrefix}) {
     return PartnerCategory.fromData(data,
@@ -3989,7 +3989,7 @@ class $RouteArtsTable extends RouteArts
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {routeId};
+  Set<GeneratedColumn> get $primaryKey => {routeId, artId};
   @override
   RouteArt map(Map<String, dynamic> data, {String? tablePrefix}) {
     return RouteArt.fromData(data,
@@ -4165,7 +4165,7 @@ class $RouteAddressesTable extends RouteAddresses
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {routeId};
+  Set<GeneratedColumn> get $primaryKey => {routeId, addressId};
   @override
   RouteAddress map(Map<String, dynamic> data, {String? tablePrefix}) {
     return RouteAddress.fromData(data,
@@ -4343,7 +4343,7 @@ class $RouteCategoriesTable extends RouteCategories
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {routeId};
+  Set<GeneratedColumn> get $primaryKey => {routeId, categoryId};
   @override
   RouteCategory map(Map<String, dynamic> data, {String? tablePrefix}) {
     return RouteCategory.fromData(data,
